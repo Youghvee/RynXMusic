@@ -210,7 +210,7 @@ async def log_(_, message: Message):
 @hellbot.app.on_message(filters.command("restart") & Config.SUDO_USERS)
 @UserWrapper
 async def restart_(_, message: Message):
-    hell = await message.reply_text("Notifying Chats about restart....")
+    hell = await message.reply_text("𝙼𝙴𝙼𝙱𝙴𝚁𝙸 𝚃𝙰𝚄 𝙾𝙱𝚁𝙾𝙻𝙰𝙽 𝚝𝚎𝚗𝚝𝚊𝚗𝚐 𝚖𝚎𝚖𝚞𝚕𝚊𝚒 𝚞𝚕𝚊𝚗𝚐....")
     active_chats = await db.get_active_vc()
     count = 0
     for x in active_chats:
@@ -218,7 +218,7 @@ async def restart_(_, message: Message):
         try:
             await hellbot.app.send_message(
                 cid,
-                f"**Bot is restarting in a minute or two.**\n\nPlease wait for a minute before using me again.",
+                f"**𝙱𝙾𝚃 𝙳𝙸 𝙼𝚄𝙻𝙰𝙸 𝚄𝙻𝙰𝙽𝙶 𝙳𝙰𝙻𝙰𝙼 1 𝙰𝚃𝙰𝚄 2 𝙼𝙴𝙽𝙸𝚃.**\n\n𝙷𝙰𝚁𝙰𝙿 𝚃𝚄𝙽𝙶𝙶𝚄 𝚂𝙴𝙱𝙴𝙽𝚃𝙰𝚁 𝚂𝙴𝙱𝙴𝙻𝚄𝙼 𝙼𝙴𝙽𝙶𝙶𝚄𝙽𝙰𝙺𝙰𝙽 𝚂𝙰𝚈𝙰 𝚕𝙰𝙶𝙸.",
             )
             await hellmusic.leave_vc(cid)
             count += 1
@@ -230,7 +230,7 @@ async def restart_(_, message: Message):
     except:
         pass
     await hell.edit(
-        f"Notified **{count}** chat(s) about the restart.\n\nRestarting now..."
+        f"Notified **{count}** chat(s) 𝚃𝙴𝙽𝚃𝙰𝙽𝙶 𝙼𝙴𝙼𝚄𝙻𝙰𝙸 𝙺𝙴𝙼𝙱𝙰𝙻𝙸.\n\nRestarting now..."
     )
     os.system(f"kill -9 {os.getpid()} && bash StartMusic")
 
