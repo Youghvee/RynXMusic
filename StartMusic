@@ -3,4 +3,4 @@
 
 # Start the music player
 
-python3 -m Music
+python3 -m RynXMusic
